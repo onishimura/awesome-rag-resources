@@ -1,0 +1,45 @@
+name: Link Check
+
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+      - '.github/workflows/link-check.yml'
+  schedule:
+    # Run weekly on Mondays at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Excluded URLs:
+          # - milvus.io: Returns 302 redirect loop without cookies (bot protection)
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-all-private
+            --exclude 'https://milvus.io/'
+            --max-retries 3
+            --timeout 20
+            README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Issue on Failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Link check failed',
+              body: 'The scheduled link check workflow has detected broken links. Please review the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.'
+            })
