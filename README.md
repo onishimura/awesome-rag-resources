@@ -18,6 +18,7 @@ Production-ready frameworks and platforms for building RAG applications:
 - [LangChain](https://www.langchain.com/) - Popular framework for building LLM applications with RAG capabilities
 - [LlamaIndex](https://www.llamaindex.ai/) - Data framework for LLM applications with focus on RAG
 - [Haystack](https://haystack.deepset.ai/) - Open-source framework for building search and RAG applications
+- [Ragie](https://www.ragie.ai/) - Managed RAG platform for ingestion, indexing and retrieval
 - [Kotaemon](https://github.com/Cinnamon/kotaemon) - Open-source RAG-based tool for chatting with your documents
 - [R2R](https://github.com/SciPhi-AI/R2R) - Research to Reality: Framework for production RAG applications
 - [Ragflow](https://github.com/infiniflow/ragflow) - Efficient RAG workflow engine
