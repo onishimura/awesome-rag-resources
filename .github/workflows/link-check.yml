@@ -13,6 +13,9 @@ on:
 jobs:
   link-check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v4
 
@@ -33,13 +36,28 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Issue on Failure
-        if: failure()
+        if: failure() && github.event_name != 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
-            github.rest.issues.create({
+            const title = 'Link check failed';
+            
+            // Check if an open issue with this title already exists
+            const existingIssues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Link check failed',
-              body: 'The scheduled link check workflow has detected broken links. Please review the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.'
-            })
+              state: 'open',
+              labels: [],
+              per_page: 100
+            });
+            
+            const issueExists = existingIssues.data.some(issue => issue.title === title);
+            
+            if (!issueExists) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: 'The scheduled link check workflow has detected broken links. Please review the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.'
+              });
+            }
