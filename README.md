@@ -66,7 +66,7 @@ Tools and resources for embedding generation and retrieval:
 - [Contextual Retrieval (Instructor)](https://python.useinstructor.com/blog/2024/09/26/implementing-anthropics-contextual-retrieval-with-async-processing/) - Implementing contextual retrieval with Instructor
 - [Hugging Face Embeddings](https://huggingface.co/models?other=embeddings) - Collection of embedding models
 - [Fine-tuning Embedding Models](https://www.youtube.com/watch?v=v28Pu7hsJ0s) - Guide to fine-tuning embedding models
-- [Qwen3 Embedding & Reranker](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B) - Apache-2.0 multilingual embedding and reranking models (0.6B-8B), top open models on MTEB
+- [Qwen3 Embedding & Reranker](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B) - Apache-2.0 multilingual embedding and reranking models from 0.6B to 8B parameters
 - [EmbeddingGemma](https://huggingface.co/google/embeddinggemma-300m) - 300M-parameter on-device embedding model from Google
 - [Qwen3-VL-Embedding](https://github.com/QwenLM/Qwen3-VL-Embedding) - Multimodal embedding and reranking models for text, image and visual-document retrieval
 - [ColPali](https://github.com/illuin-tech/colpali) - Reference implementation and training code for ColPali/ColQwen visual document retrievers
