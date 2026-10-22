@@ -23,7 +23,6 @@ Production-ready frameworks and platforms for building RAG applications:
 - [Haystack](https://haystack.deepset.ai/) - Open-source framework for building search and RAG applications
 - [Ragie](https://www.ragie.ai/) - Managed RAG platform for ingestion, indexing and retrieval
 - [Kotaemon](https://github.com/Cinnamon/kotaemon) - Open-source RAG-based tool for chatting with your documents
-- [R2R](https://github.com/SciPhi-AI/R2R) - Research to Reality: Framework for production RAG applications
 - [Ragflow](https://github.com/infiniflow/ragflow) - Efficient RAG workflow engine
 - [Letta](https://www.letta.com/) - Platform for building stateful AI agents with memory capabilities
 - [DSPy](https://github.com/stanfordnlp/dspy) - Framework for programming (not prompting) LM pipelines, with optimizers that tune RAG prompts and weights
@@ -76,6 +75,8 @@ Tools and resources for embedding generation and retrieval:
 - [bm25s](https://github.com/xhluca/bm25s) - Fast pure-Python BM25 for the lexical half of hybrid search
 - [Chonkie](https://github.com/feyninc/chonkie) - Lightweight chunking library with token, semantic, late and code chunkers
 - [Evaluating Chunking Strategies](https://www.trychroma.com/research/evaluating-chunking) - Chroma's research comparing chunking strategies on retrieval quality
+- [Nemotron 3.5 Embed & Rerank](https://huggingface.co/nvidia/Nemotron-3.5-Embed-8B-BF16) - NVIDIA's open multimodal (text + document image) embedding models (8B, 1B) and 8B reranker for visual-document and agentic retrieval (OpenMDW license)
+- [SlideOn & mSlideOn](https://huggingface.co/collections/lightonai/slideon-and-mslideon) - LightOn's Apache-2.0 sparse retrievers (English and multilingual) for the lexical side of hybrid search, with training code
 
 ## Document Processing
 
@@ -90,6 +91,7 @@ Tools for processing and parsing documents:
 - [Marker](https://github.com/datalab-to/marker) - Fast PDF/EPUB/Office to Markdown and JSON conversion with optional LLM assist (GPL code, restricted model weights)
 - [olmOCR](https://github.com/allenai/olmocr) - Ai2's VLM-based toolkit for linearizing PDFs into clean text at scale
 - [LiteParse](https://github.com/run-llama/liteparse) - Fast local PDF parser with bounding boxes, no LLM or cloud required
+- [Nemotron 3.5 Parse](https://huggingface.co/nvidia/Nemotron-3.5-Parse) - NVIDIA's open 631M-parameter document extraction model for text, tables and charts (OpenMDW license)
 
 ## Security and Privacy
 
