@@ -47,7 +47,7 @@ Vector databases and stores for RAG applications:
 - [Qdrant](https://qdrant.tech/) - Vector database with extended filtering and performance focus
 - [PostgreSQL (pgvector)](https://github.com/pgvector/pgvector) - Vector similarity search for PostgreSQL
 - [Weaviate](https://weaviate.io/) - Open-source vector database
-- [Chroma](https://www.trychroma.com/) - Embedded vector store for RAG applications
+- [Chroma](https://github.com/chroma-core/chroma) - Embedded vector store for RAG applications; Chroma Cloud stops taking writes on November 22, 2026 and stops serving reads on December 22, 2026, while open-source Chroma stays Apache-2.0
 - [Faiss](https://github.com/facebookresearch/faiss) - Efficient similarity search by Meta
 - [Milvus](https://milvus.io/) - Open-source vector database for AI applications
 - [Pinecone](https://www.pinecone.io/) - Managed vector database service
@@ -61,7 +61,7 @@ Tools and resources for embedding generation and retrieval:
 
 - [ColPali (Vespa)](https://vespa-engine.github.io/pyvespa/examples/simplified-retrieval-with-colpali-vlm_Vespa-cloud.html) - Simplified retrieval with ColPali and Vespa
 - [ColPali (Qdrant)](https://danielvanstrien.xyz/posts/post-with-code/colpali-qdrant/2024-10-02_using_colpali_with_qdrant.html) - Using ColPali with Qdrant
-- [Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval) - Anthropic's approach to contextual retrieval
+- [Contextual Retrieval](https://www.anthropic.com/research/contextual-retrieval) - Anthropic's approach to contextual retrieval
 - [Contextual Retrieval (Instructor)](https://python.useinstructor.com/blog/2024/09/26/implementing-anthropics-contextual-retrieval-with-async-processing/) - Implementing contextual retrieval with Instructor
 - [Hugging Face Embeddings](https://huggingface.co/models?other=embeddings) - Collection of embedding models
 - [Fine-tuning Embedding Models](https://www.youtube.com/watch?v=v28Pu7hsJ0s) - Guide to fine-tuning embedding models
@@ -77,6 +77,7 @@ Tools and resources for embedding generation and retrieval:
 - [Evaluating Chunking Strategies](https://www.trychroma.com/research/evaluating-chunking) - Chroma's research comparing chunking strategies on retrieval quality
 - [Nemotron 3.5 Embed & Rerank](https://huggingface.co/nvidia/Nemotron-3.5-Embed-8B-BF16) - NVIDIA's open multimodal (text + document image) embedding models (8B, 1B) and 8B reranker for visual-document and agentic retrieval (OpenMDW license)
 - [SlideOn & mSlideOn](https://huggingface.co/collections/lightonai/slideon-and-mslideon) - LightOn's Apache-2.0 sparse retrievers (English and multilingual) for the lexical side of hybrid search, with training code
+- [Cohere Rerank 5](https://cohere.com/blog/rerank-5) - Reranker that can return the relevant passages within each document in one call, with scores that support threshold filtering instead of a fixed top-k (paid)
 
 ## Document Processing
 
@@ -129,6 +130,7 @@ Tools and benchmarks for measuring retrieval and RAG quality:
 
 Essays, research, and reference architectures on building RAG systems:
 
-- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) - Anthropic's guide to curating what goes into an agent's context window
+- [Effective Context Engineering for AI Agents](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents) - Anthropic's guide to curating what goes into an agent's context window
 - [Context Rot](https://www.trychroma.com/research/context-rot) - Chroma's research on how LLM performance degrades as input length grows
-- [How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system) - Anthropic's engineering write-up on agentic search and research
+- [How We Built Our Multi-Agent Research System](https://www.anthropic.com/research/multi-agent-research-system) - Anthropic's engineering write-up on agentic search and research
+- [Retrieval Augmented Generation Compositionality](https://arxiv.org/abs/2610.29722) - IBM and Weizmann study of 450 RAG pipeline configurations where techniques that help alone do not add up when combined (three retrieval techniques predicted +47% NDCG@10 together and delivered +17%), with the Apache-2.0 lasagna framework
