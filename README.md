@@ -54,6 +54,7 @@ Vector databases and stores for RAG applications:
 - [LanceDB](https://github.com/lancedb/lancedb) - Embedded, serverless vector database on the Lance columnar format with hybrid and multimodal search
 - [Vespa](https://github.com/vespa-engine/vespa) - Search engine and vector database with hybrid search and multi-phase ranking at scale
 - [sqlite-vec](https://github.com/asg017/sqlite-vec) - Vector search SQLite extension that runs anywhere SQLite does
+- [LEANN](https://github.com/StarTrail-org/LEANN) - Low-storage vector index for local RAG that recomputes embeddings on the fly over a pruned graph (MLSys 2026), e.g. 60M chunks in 6 GB vs 201 GB for a conventional index
 
 ## Embedding & Retrieval
 
@@ -66,7 +67,7 @@ Tools and resources for embedding generation and retrieval:
 - [Hugging Face Embeddings](https://huggingface.co/models?other=embeddings) - Collection of embedding models
 - [Fine-tuning Embedding Models](https://www.youtube.com/watch?v=v28Pu7hsJ0s) - Guide to fine-tuning embedding models
 - [Qwen3 Embedding & Reranker](https://huggingface.co/Qwen/Qwen3-Embedding-0.6B) - Apache-2.0 multilingual embedding and reranking models from 0.6B to 8B parameters
-- [EmbeddingGemma](https://huggingface.co/google/embeddinggemma-300m) - 300M-parameter on-device embedding model from Google
+- [EmbeddingGemma 2](https://huggingface.co/google/embeddinggemma-2) - Google's Apache-2.0 on-device multimodal embedding model (text, code, images, video, audio in one 768-dim space; load only the encoders you need, 270M–740M)
 - [Qwen3-VL-Embedding](https://github.com/QwenLM/Qwen3-VL-Embedding) - Multimodal embedding and reranking models for text, image and visual-document retrieval
 - [ColPali](https://github.com/illuin-tech/colpali) - Reference implementation and training code for ColPali/ColQwen visual document retrievers
 - [PyLate](https://github.com/lightonai/pylate) - Library for training and serving late-interaction (ColBERT) models on Sentence Transformers
@@ -78,6 +79,7 @@ Tools and resources for embedding generation and retrieval:
 - [Nemotron 3.5 Embed & Rerank](https://huggingface.co/nvidia/Nemotron-3.5-Embed-8B-BF16) - NVIDIA's open multimodal (text + document image) embedding models (8B, 1B) and 8B reranker for visual-document and agentic retrieval (OpenMDW license)
 - [SlideOn & mSlideOn](https://huggingface.co/collections/lightonai/slideon-and-mslideon) - LightOn's Apache-2.0 sparse retrievers (English and multilingual) for the lexical side of hybrid search, with training code
 - [Cohere Rerank 5](https://cohere.com/blog/rerank-5) - Reranker that can return the relevant passages within each document in one call, with scores that support threshold filtering instead of a fixed top-k (paid)
+- [pplx-embed-v2-late](https://huggingface.co/perplexity-ai/pplx-embed-v2-late-0.6b) - Perplexity's MIT-licensed multimodal late-interaction (ColBERT-style) retrievers (0.6B, 9B) for text and visual documents, with a shared embedding space so the small model can query an index built by the large one
 
 ## Document Processing
 
