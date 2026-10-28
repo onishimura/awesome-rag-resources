@@ -54,7 +54,7 @@ Vector databases and stores for RAG applications:
 - [LanceDB](https://github.com/lancedb/lancedb) - Embedded, serverless vector database on the Lance columnar format with hybrid and multimodal search
 - [Vespa](https://github.com/vespa-engine/vespa) - Search engine and vector database with hybrid search and multi-phase ranking at scale
 - [sqlite-vec](https://github.com/asg017/sqlite-vec) - Vector search SQLite extension that runs anywhere SQLite does
-- [LEANN](https://github.com/StarTrail-org/LEANN) - Low-storage vector index for local RAG that recomputes embeddings on the fly over a pruned graph (MLSys 2026), e.g. 60M chunks in 6 GB vs 201 GB for a conventional index
+- [LEANN](https://github.com/StarTrail-org/LEANN) - Low-storage vector index for local RAG that recomputes embeddings on the fly over a pruned graph instead of storing them (MLSys 2026)
 
 ## Embedding & Retrieval
 
