@@ -28,6 +28,7 @@ Production-ready frameworks and platforms for building RAG applications:
 - [DSPy](https://github.com/stanfordnlp/dspy) - Framework for programming (not prompting) LM pipelines, with optimizers that tune RAG prompts and weights
 - [RAG-Anything](https://github.com/HKUDS/RAG-Anything) - All-in-one multimodal RAG over text, images, tables and equations, built on LightRAG
 - [PageIndex](https://github.com/VectifyAI/PageIndex) - Vectorless, reasoning-based RAG that navigates a document tree index instead of chunk similarity
+- [PixelRAG](https://github.com/StarTrail-org/PixelRAG) - Apache-2.0 RAG pipeline from Berkeley Sky Computing Lab, BAIR, and Berkeley NLP (arXiv:2606.28344) that renders web pages and documents to screenshot tiles, retrieves with a LoRA-fine-tuned Qwen3-VL-Embedding, and feeds the pixels to a VLM instead of parsing them to text
 
 ## Agent Frameworks
 
@@ -55,6 +56,7 @@ Vector databases and stores for RAG applications:
 - [Vespa](https://github.com/vespa-engine/vespa) - Search engine and vector database with hybrid search and multi-phase ranking at scale
 - [sqlite-vec](https://github.com/asg017/sqlite-vec) - Vector search SQLite extension that runs anywhere SQLite does
 - [LEANN](https://github.com/StarTrail-org/LEANN) - Low-storage vector index for local RAG that recomputes embeddings on the fly over a pruned graph instead of storing them (MLSys 2026)
+- [pg_pinecone](https://github.com/pinecone-io/pg_pinecone) - Apache-2.0 Postgres extension (PostgreSQL 17/18) that indexes existing pgvector columns with an in-database engine that filters during search, with an optional switch to a Pinecone serverless index and SQL BM25/hybrid search through a Pinecone full-text index
 
 ## Embedding & Retrieval
 
@@ -136,3 +138,4 @@ Essays, research, and reference architectures on building RAG systems:
 - [Context Rot](https://www.trychroma.com/research/context-rot) - Chroma's research on how LLM performance degrades as input length grows
 - [How We Built Our Multi-Agent Research System](https://www.anthropic.com/research/multi-agent-research-system) - Anthropic's engineering write-up on agentic search and research
 - [Retrieval Augmented Generation Compositionality](https://arxiv.org/abs/2610.29722) - IBM and Weizmann study of 450 RAG pipeline configurations where techniques that help alone do not add up when combined (three retrieval techniques predicted +47% NDCG@10 together and delivered +17%), with the Apache-2.0 lasagna framework
+- [Memory Tax: Dissecting the Net Value of Agent Memory](https://arxiv.org/abs/2610.34073) - UIUC, Tsinghua, and others (Oct 2026) find that on LongMemEval-s, PersonaMem-v2, and MINT-Eval, many of the 11 agent memory systems evaluated underperform a naive hybrid RAG baseline (BM25, dense retrieval, and a reranker over raw conversation history) in many settings, at substantially higher cost, and analyze that tax along faithfulness, accessibility, and robustness
