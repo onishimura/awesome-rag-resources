@@ -82,6 +82,8 @@ Tools and resources for embedding generation and retrieval:
 - [SlideOn & mSlideOn](https://huggingface.co/collections/lightonai/slideon-and-mslideon) - LightOn's Apache-2.0 sparse retrievers (English and multilingual) for the lexical side of hybrid search, with training code
 - [Cohere Rerank 5](https://cohere.com/blog/rerank-5) - Reranker that can return the relevant passages within each document in one call, with scores that support threshold filtering instead of a fixed top-k (paid)
 - [pplx-embed-v2-late](https://huggingface.co/perplexity-ai/pplx-embed-v2-late-0.6b) - Perplexity's MIT-licensed multimodal late-interaction (ColBERT-style) retrievers (0.6B, 9B) for text and visual documents, with a shared embedding space so the small model can query an index built by the large one
+- [BitNet Embeddings](https://huggingface.co/microsoft/bitnet-embedding-0.6b) - Microsoft Research's MIT-licensed multilingual text embedding models (0.6B, 270M) trained natively with 1.58-bit ternary weights, 32K-token context, with optimized CPU inference through bitnet.cpp
+- [Voyage rerank-3](https://blog.voyageai.com/2026/09/30/rerank-3/) - Voyage AI's rerank-3 and rerank-3-lite rerankers with 32K-token context and instruction following, aimed at long documents and code (paid)
 
 ## Document Processing
 
