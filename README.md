@@ -40,6 +40,7 @@ Frameworks for building AI agents with RAG capabilities:
 - [Smolagents](https://github.com/huggingface/smolagents) - Lightweight agents framework by Hugging Face
 - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) - Multi-agent framework by Microsoft, successor to AutoGen
 - [Search-R1](https://github.com/PeterGriffinJin/Search-R1) - RL framework for training LLMs to interleave reasoning with search engine calls
+- [DR Pixel](https://github.com/StarTrail-org/DRPixel) - Page-native deep research agent from the PixelRAG authors that iteratively searches and reasons over rendered page images, plus DRPixelBench (500 questions over 1.06M scientific-paper pages) (arXiv:2611.03097)
 
 ## Vector Stores
 
@@ -48,7 +49,7 @@ Vector databases and stores for RAG applications:
 - [Qdrant](https://qdrant.tech/) - Vector database with extended filtering and performance focus
 - [PostgreSQL (pgvector)](https://github.com/pgvector/pgvector) - Vector similarity search for PostgreSQL
 - [Weaviate](https://weaviate.io/) - Open-source vector database
-- [Chroma](https://github.com/chroma-core/chroma) - Embedded vector store for RAG applications; Chroma Cloud stops taking writes on November 22, 2026 and stops serving reads on December 22, 2026, while open-source Chroma stays Apache-2.0
+- [Chroma](https://github.com/chroma-core/chroma) - Embedded vector store for RAG applications; Chroma Cloud stops taking writes on December 7, 2026 and stops serving reads on December 22, 2026, while open-source Chroma stays Apache-2.0
 - [Faiss](https://github.com/facebookresearch/faiss) - Efficient similarity search by Meta
 - [Milvus](https://milvus.io/) - Open-source vector database for AI applications
 - [Pinecone](https://www.pinecone.io/) - Managed vector database service
@@ -87,6 +88,7 @@ Tools and resources for embedding generation and retrieval:
 - [pplx-embed-v2-context](https://huggingface.co/perplexity-ai/pplx-embed-v2-context-9b) - Perplexity's contextual embedding models (9B MIT-licensed, 0.6B) that embed each chunk with its whole document in view, trained by distilling graded chunk relevance instead of gold-chunk labels; the two sizes share an embedding space and also chunk page images for visual-document retrieval (arXiv:2610.38854)
 - [hs-rerank-1](https://huggingface.co/hindsight-ai/hs-rerank-1) - Vectorize's MIT-licensed 114M multilingual cross-encoder reranker (fine-tuned mmBERT-small, 8,192-token pairs, eight languages including Japanese) with an int8 ONNX export for CPU serving via Text Embeddings Inference
 - [KaLM-Reranker-V1-R2](https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano-R2) - Apache-2.0 encoder-decoder rerankers (0.27B, 1B, 4B on T5Gemma 2) that cache compressed document representations, with Matryoshka pooling from 1x to 128x to trade compute for quality and 128K-token context (arXiv:2606.22807)
+- [Re3Rank](https://huggingface.co/collections/Ryehr/re3rank) - Listwise reranker that scores candidates from reasoning-conditioned retrieval heads instead of verbalizing a permutation, with Apache-2.0 0.6B–8B Qwen3 and Gemma 4 weights (arXiv:2611.02550)
 
 ## Document Processing
 
