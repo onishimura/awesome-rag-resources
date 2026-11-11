@@ -23,7 +23,7 @@ Production-ready frameworks and platforms for building RAG applications:
 - [Haystack](https://haystack.deepset.ai/) - Open-source framework for building search and RAG applications
 - [Ragie](https://www.ragie.ai/) - Managed RAG platform for ingestion, indexing and retrieval
 - [Kotaemon](https://github.com/Cinnamon/kotaemon) - Open-source RAG-based tool for chatting with your documents
-- [Ragflow](https://github.com/infiniflow/ragflow) - Efficient RAG workflow engine
+- [RAGFlow](https://github.com/infiniflow/ragflow) - Open-source RAG engine with deep document parsing; 1.0 (Nov 2026) is a Go rewrite with an Agentic Chat mode that iterates retrieval, tool calls and evidence-sufficiency checks
 - [Letta](https://www.letta.com/) - Platform for building stateful AI agents with memory capabilities
 - [DSPy](https://github.com/stanfordnlp/dspy) - Framework for programming (not prompting) LM pipelines, with optimizers that tune RAG prompts and weights
 - [RAG-Anything](https://github.com/HKUDS/RAG-Anything) - All-in-one multimodal RAG over text, images, tables and equations, built on LightRAG
@@ -89,6 +89,7 @@ Tools and resources for embedding generation and retrieval:
 - [hs-rerank-1](https://huggingface.co/hindsight-ai/hs-rerank-1) - Vectorize's MIT-licensed 114M multilingual cross-encoder reranker (fine-tuned mmBERT-small, 8,192-token pairs, eight languages including Japanese) with an int8 ONNX export for CPU serving via Text Embeddings Inference
 - [KaLM-Reranker-V1-R2](https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano-R2) - Apache-2.0 encoder-decoder rerankers (0.27B, 1B, 4B on T5Gemma 2) that cache compressed document representations, with Matryoshka pooling from 1x to 128x to trade compute for quality and 128K-token context (arXiv:2606.22807)
 - [Re3Rank](https://huggingface.co/collections/Ryehr/re3rank) - Listwise reranker that scores candidates from reasoning-conditioned retrieval heads instead of verbalizing a permutation, with Apache-2.0 0.6B–8B Qwen3 and Gemma 4 weights (arXiv:2611.02550)
+- [hs-embed-1](https://huggingface.co/hindsight-ai/hs-embed-1) - Vectorize's MIT-licensed 112M multilingual embedding model (eight languages including Japanese), 384-dim vectors truncatable to 64 and 8,192-token inputs, with an int8 ONNX export for CPU serving via Text Embeddings Inference; embedding sibling of hs-rerank-1
 
 ## Document Processing
 
@@ -148,3 +149,4 @@ Essays, research, and reference architectures on building RAG systems:
 - [Memory Tax: Dissecting the Net Value of Agent Memory](https://arxiv.org/abs/2610.34073) - UIUC, Tsinghua, and others (Oct 2026) find that on LongMemEval-s, PersonaMem-v2, and MINT-Eval, many of the 11 agent memory systems evaluated underperform a naive hybrid RAG baseline (BM25, dense retrieval, and a reranker over raw conversation history) in many settings, at substantially higher cost, and analyze that tax along faithfulness, accessibility, and robustness
 - [Context as Infrastructure: Knowledge Compilation for Retrieval](https://arxiv.org/abs/2610.41172) - InfiniFlow and ECNU paper behind RAGFlow's compilation pipeline: an agentic harness with only BM25 and grep reaches 91% on FRAMES with no vector index, compiled structure adds no measurable accuracy, and claim-evidence navigation trees cut query tokens by 38% on average
 - [Retriever-Free Retrieval: Navigating Documents with Decision Models](https://arxiv.org/abs/2610.35868) - Cornell and ASAPP's DecisionRAG navigates a corpus's topic, document, and passage hierarchy with single-forward-pass decision-model judgments instead of a first-stage retriever, beating dense retrieval plus an 8B reranker by 13.8 R@1 on MultiDoc2Dial at 0.7–1.8 s per query
+- [e-means: Outperforming k-means in One-Tenth the Epochs](https://arxiv.org/abs/2611.09501) - Meta FAIR's mini-batch k-means with EMA centroid updates and scaling-law defaults (no hyperparameter sweep) that beats Lloyd's 25-epoch loss in 1.4–2.6 epochs (10–45x GPU speedup), which speeds up training IVF partitions for vector indexes; shipped in Faiss 1.16.0
