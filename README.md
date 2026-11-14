@@ -90,6 +90,7 @@ Tools and resources for embedding generation and retrieval:
 - [KaLM-Reranker-V1-R2](https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano-R2) - Apache-2.0 encoder-decoder rerankers (0.27B, 1B, 4B on T5Gemma 2) that cache compressed document representations, with Matryoshka pooling from 1x to 128x to trade compute for quality and 128K-token context (arXiv:2606.22807)
 - [Re3Rank](https://huggingface.co/collections/Ryehr/re3rank) - Listwise reranker that scores candidates from reasoning-conditioned retrieval heads instead of verbalizing a permutation, with Apache-2.0 0.6B–8B Qwen3 and Gemma 4 weights (arXiv:2611.02550)
 - [hs-embed-1](https://huggingface.co/hindsight-ai/hs-embed-1) - Vectorize's MIT-licensed 112M multilingual embedding model (eight languages including Japanese), 384-dim vectors truncatable to 64 and 8,192-token inputs, with an int8 ONNX export for CPU serving via Text Embeddings Inference; embedding sibling of hs-rerank-1
+- [MetaEncoder](https://huggingface.co/facebook/meta-encoder) - Meta's 30B instruction-following multimodal bi-encoder (text, image, video) on Muse-Glimmer-30B that scores candidates for retrieval or closed-set decisions as an inner product over cacheable embeddings, so an ANN index can serve it (Apache-2.0 plus the base model's usage policy, arXiv:2610.11316); the Nov 2026 meta-encoder-v1 update ships without a license file
 
 ## Document Processing
 
@@ -126,6 +127,7 @@ Knowledge-graph and structure-aware retrieval approaches:
 - [HippoRAG 2](https://github.com/OSU-NLP-Group/HippoRAG) - Memory-inspired graph RAG for multi-hop retrieval with cheap indexing
 - [Neo4j GraphRAG for Python](https://github.com/neo4j/neo4j-graphrag-python) - Official Neo4j package for building knowledge graphs and graph retrievers
 - [GraphRAG-Bench](https://github.com/GraphRAG-Bench/GraphRAG-Benchmark) - Benchmark and analysis of when graph structure actually helps RAG (ICLR'26)
+- [Relate](https://github.com/relatedb/relate) - Neo4j's Apache-2.0 embedded, in-process graph database in Rust (openCypher, in-memory or WAL-backed on disk) where one Cypher query can combine vector similarity search with graph traversal, with an MCP server and CLI for agents
 
 ## Evaluation & Benchmarks
 
@@ -137,6 +139,7 @@ Tools and benchmarks for measuring retrieval and RAG quality:
 - [TruLens](https://github.com/truera/trulens) - Feedback-function evaluation and tracing for RAG apps (RAG triad)
 - [MTEB](https://github.com/embeddings-benchmark/mteb) - Massive Text Embedding Benchmark and leaderboard for choosing embedding models
 - [ViDoRe V3](https://arxiv.org/abs/2601.08620) - Benchmark for visual document retrieval and RAG in enterprise scenarios
+- [CoRA-Bench](https://github.com/ZettaQuant/cora-bench) - Apache-2.0 benchmark (Stanford, Georgia Tech, ZettaQuant; NeurIPS 2026 Long-Context FM workshop, arXiv:2611.10238) of how well context selectors (truncation, BM25, dense, dense + rerank, LLMLingua-2, Provence) preserve evidence under shared 32K–128K token budgets on BABILong, LOONG, NoLiMa and LongMemEval; rankings flip between evidence recall and answer accuracy
 
 ## Guides & Research
 
