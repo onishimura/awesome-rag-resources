@@ -91,6 +91,8 @@ Tools and resources for embedding generation and retrieval:
 - [Re3Rank](https://huggingface.co/collections/Ryehr/re3rank) - Listwise reranker that scores candidates from reasoning-conditioned retrieval heads instead of verbalizing a permutation, with Apache-2.0 0.6B–8B Qwen3 and Gemma 4 weights (arXiv:2611.02550)
 - [hs-embed-1](https://huggingface.co/hindsight-ai/hs-embed-1) - Vectorize's MIT-licensed 112M multilingual embedding model (eight languages including Japanese), 384-dim vectors truncatable to 64 and 8,192-token inputs, with an int8 ONNX export for CPU serving via Text Embeddings Inference; embedding sibling of hs-rerank-1
 - [MetaEncoder](https://huggingface.co/facebook/meta-encoder) - Meta's 30B instruction-following multimodal bi-encoder (text, image, video) on Muse-Glimmer-30B that scores candidates for retrieval or closed-set decisions as an inner product over cacheable embeddings, so an ANN index can serve it (Apache-2.0 plus the base model's usage policy, arXiv:2610.11316); the Nov 2026 meta-encoder-v1 update ships without a license file
+- [Ettin Rerankers](https://huggingface.co/blog/ettin-reranker) - Six Apache-2.0 Sentence Transformers cross-encoder rerankers (17M-1B, 8K context) on Ettin ModernBERT, with open training data and recipe
+- [OpenSearch Neural Sparse asym-v1](https://huggingface.co/opensearch-project/opensearch-neural-sparse-encoding-asym-v1) - Learned sparse (SPLADE) retriever pairing a 41M CPU-friendly query encoder with a 137M offline document encoder, served from an inverted index
 
 ## Document Processing
 
