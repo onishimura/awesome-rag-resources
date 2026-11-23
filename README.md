@@ -94,6 +94,7 @@ Tools and resources for embedding generation and retrieval:
 - [Ettin Rerankers](https://huggingface.co/blog/ettin-reranker) - Six Apache-2.0 Sentence Transformers cross-encoder rerankers (17M-1B, 8K context) on Ettin ModernBERT, with open training data and recipe
 - [OpenSearch Neural Sparse asym-v1](https://huggingface.co/opensearch-project/opensearch-neural-sparse-encoding-asym-v1) - Learned sparse (SPLADE) retriever pairing a 41M CPU-friendly query encoder with a 137M offline document encoder, served from an inverted index
 - [UIBK-Embedding-v1](https://huggingface.co/DataScience-UIBK/uibk-embedding-v1) - University of Innsbruck's Apache-2.0 179M ModernBERT retriever that packs a dense and a late-interaction (ColBERT) head into one model and one PLAID index, loading as a plain PyLate model
+- [Atto](https://huggingface.co/blog/neuml/introducing-atto) - NeuML's compact dense, sparse and ColBERT embedding family from 840 params to 28M, Apache-2.0
 
 ## Document Processing
 
@@ -145,6 +146,7 @@ Tools and benchmarks for measuring retrieval and RAG quality:
 - [ViDoRe V3](https://arxiv.org/abs/2601.08620) - Benchmark for visual document retrieval and RAG in enterprise scenarios
 - [CoRA-Bench](https://github.com/ZettaQuant/cora-bench) - Apache-2.0 benchmark (Stanford, Georgia Tech, ZettaQuant; NeurIPS 2026 Long-Context FM workshop, arXiv:2611.10238) of how well context selectors (truncation, BM25, dense, dense + rerank, LLMLingua-2, Provence) preserve evidence under shared 32K–128K token budgets on BABILong, LOONG, NoLiMa and LongMemEval; rankings flip between evidence recall and answer accuracy
 - [ParseBench](https://github.com/run-llama/ParseBench) - Apache-2.0 document-parsing benchmark for agent pipelines (arXiv:2604.08538) scoring tables, charts, faithfulness, formatting, visual grounding and forms with rule-based tests; ParseBench 2 adds severity-aware scoring over 4,317 pages
+- [AutoRAGBench](https://github.com/ZhanGHanG9991/AutoRAGBench) - Benchmark of LLM agents building RAG systems from scratch across nine tasks (arXiv:2611.25582)
 
 ## Guides & Research
 
@@ -158,3 +160,4 @@ Essays, research, and reference architectures on building RAG systems:
 - [Context as Infrastructure: Knowledge Compilation for Retrieval](https://arxiv.org/abs/2610.41172) - InfiniFlow and ECNU paper behind RAGFlow's compilation pipeline: an agentic harness with only BM25 and grep reaches 91% on FRAMES with no vector index, compiled structure adds no measurable accuracy, and claim-evidence navigation trees cut query tokens by 38% on average
 - [Retriever-Free Retrieval: Navigating Documents with Decision Models](https://arxiv.org/abs/2610.35868) - Cornell and ASAPP's DecisionRAG navigates a corpus's topic, document, and passage hierarchy with single-forward-pass decision-model judgments instead of a first-stage retriever, beating dense retrieval plus an 8B reranker by 13.8 R@1 on MultiDoc2Dial at 0.7–1.8 s per query
 - [e-means: Outperforming k-means in One-Tenth the Epochs](https://arxiv.org/abs/2611.09501) - Meta FAIR's mini-batch k-means with EMA centroid updates and scaling-law defaults (no hyperparameter sweep) that beats Lloyd's 25-epoch loss in 1.4–2.6 epochs (10–45x GPU speedup), which speeds up training IVF partitions for vector indexes; shipped in Faiss 1.16.0
+- [Big Graphs, Small Vectors: HNSW at a Billion](https://hornet.dev/blog/big-graphs-small-vectors-hnsw-at-a-billion) - How HNSW query cost and recall hold up at 1B vectors with 2-bit quantization and disk rescoring
