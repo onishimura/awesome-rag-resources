@@ -95,6 +95,8 @@ Tools and resources for embedding generation and retrieval:
 - [OpenSearch Neural Sparse asym-v1](https://huggingface.co/opensearch-project/opensearch-neural-sparse-encoding-asym-v1) - Learned sparse (SPLADE) retriever pairing a 41M CPU-friendly query encoder with a 137M offline document encoder, served from an inverted index
 - [UIBK-Embedding-v1](https://huggingface.co/DataScience-UIBK/uibk-embedding-v1) - University of Innsbruck's Apache-2.0 179M ModernBERT retriever that packs a dense and a late-interaction (ColBERT) head into one model and one PLAID index, loading as a plain PyLate model
 - [Atto](https://huggingface.co/blog/neuml/introducing-atto) - NeuML's compact dense, sparse and ColBERT embedding family from 840 params to 28M, Apache-2.0
+- [OmniEVIE](https://github.com/Tencent/OmniEVIE) - Tencent's Apache-2.0 4.5B multi-vector embedding model for text, images, visual documents, video and tool retrieval that compresses each record to at most 128 int8 64-dim vectors (about 9 KB) and returns the page region or video timestamp behind each hit (arXiv:2611.32203)
+- [opensearch-neural-embed-v1](https://huggingface.co/opensearch-project/opensearch-neural-embed-v1) - OpenSearch Project's first dense embedding model (Apache-2.0, 598M, 2,048-dim vectors), distilled from two teacher embedders onto Qwen3-Embedding-0.6B with no labeled data; dense sibling of the asym-v1 sparse retriever
 
 ## Document Processing
 
@@ -108,7 +110,7 @@ Tools for processing and parsing documents:
 - [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) - OCR and document parsing toolkit including the compact PaddleOCR-VL model
 - [Marker](https://github.com/datalab-to/marker) - Fast PDF/EPUB/Office to Markdown and JSON conversion with optional LLM assist (GPL code, restricted model weights)
 - [olmOCR](https://github.com/allenai/olmocr) - Ai2's VLM-based toolkit for linearizing PDFs into clean text at scale
-- [LiteParse](https://github.com/run-llama/liteparse) - Fast local PDF parser with bounding boxes, no LLM or cloud required
+- [LiteParse](https://github.com/run-llama/liteparse) - Fast local PDF parser with bounding boxes, no LLM or cloud required; the optional OCRia-nano-1 backend (8.1M-parameter OCR and table/layout models on CPU or WebAssembly) has its own revenue-capped model license while LiteParse stays Apache-2.0
 - [Nemotron 3.5 Parse](https://huggingface.co/nvidia/Nemotron-3.5-Parse) - NVIDIA's open 631M-parameter document extraction model for text, tables and charts (OpenMDW license)
 
 ## Security and Privacy
